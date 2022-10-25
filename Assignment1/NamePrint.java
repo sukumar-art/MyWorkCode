@@ -1,4 +1,4 @@
-class NamePrint{
+public class NamePrint{
     public static void main(String[] arga){
 
         int n=13, r,c;
