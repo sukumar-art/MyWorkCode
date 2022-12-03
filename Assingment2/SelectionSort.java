@@ -1,6 +1,6 @@
 class SelectSort{
     public int sortArray(int[] a, int low, int high){
-    //WAP to process given array in to Section sort method                
+    //WAP to process given array in to Selection sort method                
         int i=low; int j=high;
 
         while(i<a.length){                                 //While used insted of for Loop
