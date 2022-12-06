@@ -17,10 +17,10 @@ public class PalindromeString {
         String s = new String("madam");
                 
         if(sCheck(s)){
-            System.out.println("2552 is a Palindrom");
+            System.out.println("MADAM is a Palindrom");
         }
         else{
-            System.out.println("2552 is not a Palindrom");
+            System.out.println("MADAM is not a Palindrom");
         }
         System.out.println(sCheck(s));
     }
