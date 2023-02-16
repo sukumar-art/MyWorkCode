@@ -1,4 +1,3 @@
-
 public class PalindromeString {
     static boolean sCheck(String s) {
 
