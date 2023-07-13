@@ -13,7 +13,7 @@ public class PalindromeString {
     }
     public static void main(String[] args) {
         
-        String s = new String("madam");
+        String s = new String("amadama");
                 
         if(sCheck(s)){
             System.out.println("MADAM is a Palindrom");
