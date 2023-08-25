@@ -2,11 +2,12 @@ package DTO;
 
 import java.io.Serializable;
 
-public class Student implements Serializable{
-	
-	
+/* Resembelance of IStudentDao (DTO - Data Transer Object) */
+/* Taking data from  StudentDao */
+public class Student implements Serializable {
+
 	private static final long serialVersionUID = 1L;
-	
+
 	private Integer sid;
 	private String sname;
 	private Integer sage;

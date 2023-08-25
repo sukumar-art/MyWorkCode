@@ -2,14 +2,13 @@ package Controller;
 
 import java.util.InputMismatchException;
 /* Class Imported */
-import java.util.Scanner;
 import Main.LaunchBanking;
 import Model.FunctionImpl;
 
 /* Interface Implemented for Overriding */
 public class Controller implements FunctionImpl {
 
-    static java.util.Scanner scan = new Scanner(System.in);
+    java.util.Scanner scan = new java.util.Scanner(System.in);
     /* User Registetration Credentials */
     static String name;
     static String userName;
@@ -19,6 +18,7 @@ public class Controller implements FunctionImpl {
     public Integer deposit = 0;
     static Integer withdrawl = 0;
 
+    /* Registetration Method */
     @Override
     public boolean register() {
         System.out.println("Open Account with us");
@@ -36,6 +36,7 @@ public class Controller implements FunctionImpl {
         return true;
     }
 
+    /* Login Method */
     @Override
     public boolean logIn() {
         System.out.println("Enter userName: ");
@@ -52,6 +53,7 @@ public class Controller implements FunctionImpl {
         return false;
     }
 
+    /* Balance Checking Method */
     @Override
     public void chekBalance() {
         if (LaunchBanking.bal > 0) {
@@ -64,17 +66,19 @@ public class Controller implements FunctionImpl {
         }
     }
 
+    /* Deposit Method */
     @Override
     public Integer deposit(Integer deposit) {
         this.deposit = deposit;
         return deposit;
     }
 
+    /* Withdrawl Method */
     @Override
     public void withdrawl() {
         try {
             if (balance == 0) {
-                System.out.println("Your don't funds");
+                System.out.println("Your don't have funds");
             } else {
                 System.out.println("Enter the amount you want to Withdraw");
                 withdrawl = scan.nextInt();

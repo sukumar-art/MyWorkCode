@@ -6,27 +6,27 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 public class PreparedDelete {
-    public static void deleteRecord () {
+    public static void deleteRecord() {
         Connection connection = null;
         Scanner scan = new Scanner(System.in);
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
         try {
             connection = JdbcUtil.getJdbcConnection();
-            if(connection != null ) {
+            if (connection != null) {
                 String sqlUpdateQuery = "delete from Employee where id = ?";
                 preparedStatement = connection.prepareStatement(sqlUpdateQuery);
             }
-            if(preparedStatement != null) {
+            if (preparedStatement != null) {
                 System.out.println("Enter the record ID::");
-                int id =scan.nextInt();
-                              
+                int id = scan.nextInt();
+
                 preparedStatement.setInt(1, id);
                 int rows = preparedStatement.executeUpdate();
-                System.out.println("Row Updated::"+rows);
-                
+                System.out.println("Row Updated::" + rows);
+
             }
-            
+
         } catch (SQLException se) {
             se.printStackTrace();
         } catch (IOException ie) {
