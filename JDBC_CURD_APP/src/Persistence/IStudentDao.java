@@ -1,7 +1,7 @@
 package Persistence;
 
 import DTO.Student;
-
+/* DAO is Data Access Object Layer */
 public interface IStudentDao {
 	
 	// operations to be implemented
